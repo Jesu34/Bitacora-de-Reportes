@@ -1,0 +1,384 @@
+/* Variables de color */
+:root {
+    --color-primary: #3498db;
+    --color-secondary: #2c3e50;
+    --color-background: #f4f4f4;
+    --color-text: #333;
+    --color-white: #fff;
+    --color-grey: #ddd;
+    --color-light-shadow: rgba(0, 0, 0, 0.1);
+    --color-dark-shadow: rgba(0, 0, 0, 0.2);
+    --color-edit: #f39c12;
+    --color-delete: #e74c3c;
+}
+
+/* Estilos generales */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--color-background);
+    color: var(--color-text);
+}
+
+/* Contenedor principal */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Encabezado */
+header {
+    background-color: var(--color-secondary);
+    color: var(--color-white);
+    padding: 1rem 0;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    gap: 1rem;
+}
+
+nav a {
+    color: var(--color-white);
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+nav a:hover {
+    background-color: var(--color-primary);
+}
+
+/* Contenido principal */
+main {
+    padding: 2rem 0;
+}
+
+h1, h2 {
+    color: var(--color-secondary);
+}
+
+/* Formularios */
+form {
+    background-color: var(--color-white);
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px var(--color-light-shadow);
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+form label {
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+form input, form select, form textarea {
+    width: 100%;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border: 1px solid var(--color-grey);
+    border-radius: 4px;
+}
+
+form button {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+form button:hover {
+    background-color: #2980b9;
+}
+
+/* Estilos para el formulario de inicio de sesión y registro */
+.login-form, .register-form {
+    background-color: rgba(255, 255, 255, 0.9); /* Fondo blanco con opacidad del 90% */
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px var(--color-dark-shadow);
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+/* Estilos adicionales para formularios en dispositivos móviles */
+@media (max-width: 480px) {
+    .login-form, .register-form {
+        padding: 1rem;
+    }
+
+    .container {
+        padding: 0 10px;
+    }
+
+    .summary {
+        grid-template-columns: 1fr;
+    }
+
+    .form-section, .table-section {
+        padding: 1rem;
+    }
+
+    table th, table td {
+        padding: 0.5rem;
+    }
+}
+
+/* Tablas */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: var(--color-white);
+    box-shadow: 0 2px 4px var(--color-light-shadow);
+}
+
+th, td {
+    padding: 1rem;
+    text-align: left;
+    border-bottom: 1px solid var(--color-grey);
+}
+
+th {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+}
+
+/* Estilos para los botones de acción en las tablas */
+.action-buttons {
+    display: flex;
+    gap: 0.5rem;
+    justify-content: center;
+}
+
+.action-buttons button {
+    padding: 0.25rem 0.5rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.edit-btn {
+    background-color: var(--color-edit);
+    color: var(--color-white);
+}
+
+.delete-btn {
+    background-color: var(--color-delete);
+    color: var(--color-white);
+}
+
+.edit-btn:hover {
+    background-color: #d68910;
+}
+
+.delete-btn:hover {
+    background-color: #c0392b;
+}
+
+/* Pie de página */
+footer {
+    background-color: var(--color-secondary);
+    color: var(--color-white);
+    text-align: center;
+    padding: 1rem 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Estilos específicos para el dashboard */
+.summary {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.summary-card {
+    background-color: var(--color-white);
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px var(--color-light-shadow);
+}
+
+.summary-card h3 {
+    margin-top: 0;
+    color: var(--color-primary);
+}
+
+/* Estilos para las secciones de formulario y tabla */
+.form-section, .table-section {
+    background-color: var(--color-white);
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px var(--color-light-shadow);
+    margin-bottom: 2rem;
+}
+
+/* Estilos para los formularios */
+form textarea {
+    width: 100%;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border: 1px solid var(--color-grey);
+    border-radius: 4px;
+    resize: vertical;
+}
+
+/* Estilos para las tablas */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table th, table td {
+    padding: 0.75rem;
+    text-align: left;
+    border-bottom: 1px solid var(--color-grey);
+}
+
+table th {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+}
+
+/* Estilos para los botones de acción en las tablas */
+.action-buttons {
+    display: flex;
+    gap: 0.5rem;
+    justify-content: center;
+}
+
+.action-buttons button {
+    padding: 0.25rem 0.5rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.edit-btn {
+    background-color: var(--color-edit);
+    color: var(--color-white);
+}
+
+.delete-btn {
+    background-color: var(--color-delete);
+    color: var(--color-white);
+}
+
+.edit-btn:hover {
+    background-color: #d68910;
+}
+
+.delete-btn:hover {
+    background-color: #c0392b;
+}
+
+/* Media Queries para dispositivos pequeños */
+@media (max-width: 1024px) {
+    .container {
+        padding: 0 10px;
+    }
+
+    .summary {
+        grid-template-columns: 1fr;
+    }
+
+    .summary-card {
+        padding: 0.75rem;
+    }
+
+    .form-section, .table-section {
+        padding: 1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    nav a {
+        padding: 0.75rem;
+    }
+}
+
+/* Estilos para dispositivos móviles */
+@media (max-width: 480px) {
+    .login-form, .register-form {
+        padding: 1rem;
+    }
+
+    .container {
+        padding: 0 10px;
+    }
+
+    .summary {
+        grid-template-columns: 1fr;
+    }
+
+    .form-section, .table-section {
+        padding: 1rem;
+    }
+
+    table th, table td {
+        padding: 0.5rem;
+    }
+}
+
+/* Ajustes adicionales para la página de reportes */
+.report-table {
+    overflow-x: auto;
+}
+
+.report-table th, .report-table td {
+    padding: 0.5rem;
+}
+
+@media (max-width: 768px) {
+    .report-table th, .report-table td {
+        padding: 0.75rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .report-table th, .report-table td {
+        display: block;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .report-table th {
+        display: none;
+    }
+
+    .report-table td {
+        border-bottom: 1px solid var(--color-grey);
+        position: relative;
+        padding-left: 50%;
+    }
+
+   
+}
